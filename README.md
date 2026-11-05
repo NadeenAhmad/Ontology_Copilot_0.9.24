@@ -75,8 +75,20 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
 ## Your data
 
 - Your API key stays on your computer: in the macOS Keychain, or only for the current session.
-- The plugin keeps a local activity log of what you do in it (`Documents/OntologyCopilot/activity`). It is never sent
-  anywhere, and you can switch it off in Settings.
+- The plugin keeps a local activity log of what you do in it. It is never sent anywhere (see below).
+
+### Activity log
+
+The activity log is **on by default**.
+
+- **Switch it on or off:** open the side panel with **◂** on the right, click **Settings…**, and tick or untick
+  **"Keep a local activity log (for research you may share; nothing is sent)"**.
+- **Find it:** in the same Settings window, click **Open activity folder**. The folder is
+  `~/Documents/OntologyCopilot/activity` on macOS and Linux, and `C:\Users\<name>\Documents\OntologyCopilot\activity`
+  on Windows.
+- **What's in it:** two files per session, named after the time it started: `…-events.jsonl` (what you did, one line
+  per action) and `…-explanations.md` (the explanations the plugin gave). A session starts when the plugin's view opens
+  and ends when the ontology is saved or the view closes. Your API key is never written to these files.
 
 ## In this repository
 
