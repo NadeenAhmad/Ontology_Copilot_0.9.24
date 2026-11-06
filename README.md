@@ -5,13 +5,15 @@
   </picture>
 </div>
 
-# Ontology Copilot 0.9.26
+# Ontology Copilot 0.9.27
 
 A plugin for [Protégé](https://protege.stanford.edu) that helps you draft and edit ontologies with an LLM assistant,
 using methods from peer-reviewed research (NeOn-GPT, Ontogenia, RIGOR-Lite and a direct draft). Every change is shown
 in Change Preview first; nothing changes in your ontology until you press Apply.
 
-**New in 0.9.26:** the plugin has its own tab and goes step by step: the four steps are named at the top, Back and Next sit under every page, and the chat is always on the right. Apply no longer gets stuck: the checks run by themselves (with HermiT when no reasoner is selected in Protégé), and what they find is shown once before anything changes. After Apply you can Undo and apply again, and **Start over** clears everything. If you installed an earlier version with Option 1, **File ▸ Check for plugins…** offers 0.9.26 as an update. The install screenshots were taken with 0.9.24; the steps are the same.
+**New in 0.9.27:** pop-ups you can resize; a graph you can zoom and open in its own window, with property lines and labels that no longer overlap; run progress that keeps your place while you scroll; an **Install RDFLib** button (Settings ▸ Checks) for the file check NeOn-GPT uses (if the install doesn't work, NeOn-GPT still runs and says the check was skipped); and plainer notes after a NeOn-GPT run.
+
+**Since 0.9.26:** the plugin has its own tab and goes step by step: the four steps are named at the top, Back and Next sit under every page, and the chat is always on the right. Apply no longer gets stuck: the checks run by themselves (with HermiT when no reasoner is selected in Protégé), and what they find is shown once before anything changes. After Apply you can Undo and apply again, and **Start over** clears everything. If you installed an earlier version with Option 1, **File ▸ Check for plugins…** offers 0.9.27 as an update. The install screenshots were taken with 0.9.24; the steps are the same.
 
 ## Install
 
@@ -45,7 +47,7 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
 
 ### Option 2: by hand
 
-1. Download [`protege-ontology-copilot-0.9.26.jar`](protege-ontology-copilot-0.9.26.jar).
+1. Download [`protege-ontology-copilot-0.9.27.jar`](protege-ontology-copilot-0.9.27.jar).
 2. Quit Protégé and copy the file into Protégé's `plugins` folder:
    - macOS: right-click Protégé.app ▸ **Show Package Contents** ▸ `Contents` ▸ `plugins`;
    - Windows / Linux: the `plugins` folder inside the Protégé folder.
@@ -73,6 +75,10 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
    Keychain** on macOS), then **Test connection**. Ollama needs no key. The plugin remembers the provider and model
    for next time; the key only if you saved it to the Keychain.
 
+   Further down, under **Checks**, click **Install RDFLib** if it says the file check isn't installed. It needs
+   Python 3 and internet, and installs only into the plugin's own folder (`~/.ontology-copilot/python`). Without it
+   everything still works; NeOn-GPT then skips this one check and tells you so.
+
    <img src="images/install/6-settings.png" width="460" alt="Ontology Copilot settings: provider, model, endpoint">
 
 4. Follow the steps at the top: **1 Brief › 2 Inputs › 3 Generate › 4 Review & apply**. **Next** and **Back** are at
@@ -99,7 +105,7 @@ The activity log is **on by default**.
 
 ## In this repository
 
-- `protege-ontology-copilot-0.9.26.jar`: the plugin.
+- `protege-ontology-copilot-0.9.27.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
 - `images/`: the logos and screenshots used here.
 
