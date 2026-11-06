@@ -5,13 +5,13 @@
   </picture>
 </div>
 
-# Ontology Copilot 0.9.25
+# Ontology Copilot 0.9.26
 
 A plugin for [Protégé](https://protege.stanford.edu) that helps you draft and edit ontologies with an LLM assistant,
 using methods from peer-reviewed research (NeOn-GPT, Ontogenia, RIGOR-Lite and a direct draft). Every change is shown
 in Change Preview first; nothing changes in your ontology until you press Apply.
 
-**New in 0.9.25:** the blue buttons (▶ Run …, Next, Apply) are blue on Windows and Linux too. In 0.9.24 they looked greyed out there, although they worked. If you installed 0.9.24 with Option 1, **File ▸ Check for plugins…** offers 0.9.25 as an update. The screenshots below were taken with 0.9.24; the steps are the same.
+**New in 0.9.26:** the plugin has its own tab and goes step by step: the four steps are named at the top, Back and Next sit under every page, and the chat is always on the right. Apply no longer gets stuck: the checks run by themselves (with HermiT when no reasoner is selected in Protégé), and what they find is shown once before anything changes. After Apply you can Undo and apply again, and **Start over** clears everything. If you installed an earlier version with Option 1, **File ▸ Check for plugins…** offers 0.9.26 as an update. The install screenshots were taken with 0.9.24; the steps are the same.
 
 ## Install
 
@@ -45,7 +45,7 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
 
 ### Option 2: by hand
 
-1. Download [`protege-ontology-copilot-0.9.25.jar`](protege-ontology-copilot-0.9.25.jar).
+1. Download [`protege-ontology-copilot-0.9.26.jar`](protege-ontology-copilot-0.9.26.jar).
 2. Quit Protégé and copy the file into Protégé's `plugins` folder:
    - macOS: right-click Protégé.app ▸ **Show Package Contents** ▸ `Contents` ▸ `plugins`;
    - Windows / Linux: the `plugins` folder inside the Protégé folder.
@@ -58,21 +58,26 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
 
 ## First start
 
-1. Open or create an ontology, then choose **Window ▸ Views ▸ Ontology views ▸ Ontology Copilot (0.9.25)** and click
-   where the view should go.
+1. Open or create an ontology and click the **Ontology Copilot** tab. If you don't see it (this can happen when you
+   used Protégé before), choose **Window ▸ Tabs ▸ Ontology Copilot**.
 
-   <img src="images/install/4-open-view.png" width="520" alt="Window, Views, Ontology views, Ontology Copilot (0.9.24)">
+   <img src="images/install/4-copilot-tab.png" width="640" alt="The Ontology Copilot tab: the four steps at the top, the chat on the right">
 
-2. A short guided tour starts the first time. Skip it, or click through its 10 steps; the **Quickstart** button starts
-   it again.
+2. A short guided tour starts the first time. Skip it, or click through its 10 steps; the **Tutorial** button (top
+   right) starts it again.
 
    <img src="images/install/5b-welcome-card.png" width="320" alt="The guided tour's welcome card">
 
-3. Open the side panel with **◂** on the right, click **Settings…**, choose a **Provider** (OpenRouter, OpenAI,
-   Anthropic, Google Gemini or a local Ollama) and a **Model**, paste your API key further down and click
-   **Use for this session only** (or **Save to Keychain** on macOS), then **Test connection**. Ollama needs no key.
+3. Click **Settings…** (top right), choose a **Provider** (OpenRouter, OpenAI, Anthropic, Google Gemini or a local
+   Ollama) and a **Model**, paste your API key further down and click **Use for this session only** (or **Save to
+   Keychain** on macOS), then **Test connection**. Ollama needs no key. The plugin remembers the provider and model
+   for next time; the key only if you saved it to the Keychain.
 
    <img src="images/install/6-settings.png" width="460" alt="Ontology Copilot settings: provider, model, endpoint">
+
+4. Follow the steps at the top: **1 Brief › 2 Inputs › 3 Generate › 4 Review & apply**. **Next** and **Back** are at
+   the bottom of each page; when Next is grey, the reason is written beside it. Nothing changes in your ontology until
+   you click **Apply** in step 4, and **Undo** there takes it out again.
 
 ## Your data
 
@@ -83,7 +88,7 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
 
 The activity log is **on by default**.
 
-- **Switch it on or off:** open the side panel with **◂** on the right, click **Settings…**, and tick or untick
+- **Switch it on or off:** click **Settings…** (top right of the plugin), and tick or untick
   **"Keep a local activity log (for research you may share; nothing is sent)"**.
 - **Find it:** in the same Settings window, click **Open activity folder**. The folder is
   `~/Documents/OntologyCopilot/activity` on macOS and Linux, and `C:\Users\<name>\Documents\OntologyCopilot\activity`
@@ -94,7 +99,7 @@ The activity log is **on by default**.
 
 ## In this repository
 
-- `protege-ontology-copilot-0.9.25.jar`: the plugin.
+- `protege-ontology-copilot-0.9.26.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
 - `images/`: the logos and screenshots used here.
 
