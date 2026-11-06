@@ -5,11 +5,13 @@
   </picture>
 </div>
 
-# Ontology Copilot 0.9.24
+# Ontology Copilot 0.9.25
 
 A plugin for [Protégé](https://protege.stanford.edu) that helps you draft and edit ontologies with an LLM assistant,
 using methods from peer-reviewed research (NeOn-GPT, Ontogenia, RIGOR-Lite and a direct draft). Every change is shown
 in Change Preview first; nothing changes in your ontology until you press Apply.
+
+**New in 0.9.25:** the blue buttons (▶ Run …, Next, Apply) are blue on Windows and Linux too. In 0.9.24 they looked greyed out there, although they worked. If you installed 0.9.24 with Option 1, **File ▸ Check for plugins…** offers 0.9.25 as an update. The screenshots below were taken with 0.9.24; the steps are the same.
 
 ## Install
 
@@ -43,7 +45,7 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
 
 ### Option 2: by hand
 
-1. Download [`protege-ontology-copilot-0.9.24.jar`](protege-ontology-copilot-0.9.24.jar).
+1. Download [`protege-ontology-copilot-0.9.25.jar`](protege-ontology-copilot-0.9.25.jar).
 2. Quit Protégé and copy the file into Protégé's `plugins` folder:
    - macOS: right-click Protégé.app ▸ **Show Package Contents** ▸ `Contents` ▸ `plugins`;
    - Windows / Linux: the `plugins` folder inside the Protégé folder.
@@ -56,7 +58,7 @@ by hand (Option 2), delete that copy from Protégé's `plugins` folder first, so
 
 ## First start
 
-1. Open or create an ontology, then choose **Window ▸ Views ▸ Ontology views ▸ Ontology Copilot (0.9.24)** and click
+1. Open or create an ontology, then choose **Window ▸ Views ▸ Ontology views ▸ Ontology Copilot (0.9.25)** and click
    where the view should go.
 
    <img src="images/install/4-open-view.png" width="520" alt="Window, Views, Ontology views, Ontology Copilot (0.9.24)">
@@ -92,7 +94,7 @@ The activity log is **on by default**.
 
 ## In this repository
 
-- `protege-ontology-copilot-0.9.24.jar`: the plugin.
+- `protege-ontology-copilot-0.9.25.jar`: the plugin.
 - `update.properties`, `ontology-copilot.repository`, `readme.html`: what Protégé's plugin installer reads.
 - `images/`: the logos and screenshots used here.
 
